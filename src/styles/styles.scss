@@ -1,0 +1,25 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.Header {
+  border: 1px solid red;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+
+.ToDo {
+  border: 1px solid blue;
+  position: absolute;
+  bottom: 30%;
+  width: 100%;
+}
+
+.Footer {
+  border: 1px solid blue;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
