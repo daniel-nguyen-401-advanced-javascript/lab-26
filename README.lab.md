@@ -4,8 +4,9 @@ In this lab, you will be creating a ToDo application, utilizing functional compo
     
 ## Links
     
-- [CodeSandbox]()
-- [Netlify]()
+- [CodeSandbox](https://codesandbox.io/s/laughing-fog-g6c5d)
+- [Netlify](https://stupefied-dijkstra-332a7c.netlify.app)
+I can't quite get the Netlify working. No idea how to fix. 
     
 ## Challenge
     
