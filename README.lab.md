@@ -4,7 +4,8 @@ In this lab, you will be creating a ToDo application, utilizing functional compo
     
 ## Links
     
-- [pull request]()
+- [CodeSandbox]()
+- [Netlify]()
     
 ## Challenge
     
@@ -26,4 +27,4 @@ Your ToDo application should have the following features:
     
 
 ## UML
-![lab-26-uml](./assets/lab-26-uml.png)
+![lab-26-uml](https://github.com/daniel-nguyen-401-advanced-javascript/lab-26/blob/lab-setup/src/assets/lab-26-uml.png)
