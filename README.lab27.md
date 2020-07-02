@@ -5,8 +5,8 @@ In this lab, you will be extending your ToDo application, utilizing a remote API
 ## Links
     
 - [CodeSandbox](https://codesandbox.io/live/ER6xQk)
-- [Netlify]()
- 
+- [Netlify](https://hopeful-hermann-f924b5.netlify.app/)
+ I still cannot ever get Netlify to work! I think this app hates me. It says it deployed but then nothing shows. 
     
 ## Challenge
     
