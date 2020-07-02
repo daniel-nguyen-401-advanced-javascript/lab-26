@@ -1,24 +1,40 @@
-import React, {useState} from 'react';
+import React from 'react';
+import Form from 'react-bootstrap/Form';
 
 function ToDoItem(props) {
 
-const [done, setDone] = useState(props.item.status);
-
   return (
-    <>
-    <div className="ToDoItem">
-    <p className="title">Task:</p>
-    <p className="description">{props.item.description}</p>
-    <p>Assigned:</p>
-    <p>{props.item.assigned}</p>
-    <p>Difficulty:</p>
-    <p>{props.item.difficulty}</p>
-    <label>Status:</label>
-    <input type="checkbox" checked={done} onChange={() => { setDone(!done) }}/>
+    <div>
+      <p>{props.data.text}</p>
+      <p>{props.data.assignee}</p>
+      <p>{props.data.difficulty}</p>
+
+      <button
+        onClick={() => {
+          props.deleteTask(props.indx);
+        }}
+        >
+          Delete
+        </button>
+
+      <Form.Group controlId={'todo-status-' + props.indx}>
+        <Form.Label>Status</Form.Label>
+        <Form.Check 
+          value={props.data.status}
+          type='switch'
+          onChange={() => {
+            let newTask = {...props.data};
+            newTask.status = !newTask.status;
+            props.modifyTask(props.indx, newTask)
+
+          }}
+          id={'status-switch-' + props.indx}
+          label={props.data.status}
+          />
+      </Form.Group>
 
     </div>
-    </>
-  )
+  );
 }
 
 export default ToDoItem;

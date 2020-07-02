@@ -1,32 +1,55 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ToDoList from "./ToDoList";
 import ToDoForm from "./ToDoForm";
+import Container from 'react-bootstrap/Container';
+import useFetch from '../hooks/useFetch';
 
 
 function ToDo(props) {
 
-  const [list, setList] = useState([]);
+  const {setRequest, response} = useFetch({
+    url: 'https://todo-server-401n16.herokuapp.com/api/v1/todo',
+  });
 
-  useEffect(() =>{
-    let str = `${list.length} Remaining Task`;
-    if(list.length !==1) {
-      str += 's';
-    }
+  async function addTask(taskDetails) {
+    await setRequest({
+      url: 'https://todo-server-401n16.herokuapp.com/api/v1/todo',
+      method: 'POST',
+      body: taskDetails,
+      runGet: 'https://todo-server-401n16.herokuapp.com/api/v1/todo',
+    });
+  }
 
-    document.title = str;
-  }, [list])
+  async function modifyTask(indx, updatedTask) {
+    await setRequest({
+      url: 'https://todo-server-401n16.herokuapp.com/api/v1/todo/' + response[indx]._id,
+      method: 'PUT',
+      body: updatedTask,
+      runGet: 'https://todo-server-401n16.herokuapp.com/api/v1/todo',
+    });
+  }
+
+  async function deleteTask(indx) {
+    await setRequest({
+      url: 'https://todo-server-401n16.herokuapp.com/api/v1/todo/' + response[indx]._id,
+      method: 'DELETE',
+      runGet: 'https://todo-server-401n16.herokuapp.com/api/v1/todo',
+    });
+  }
 
   return (
-    <>
-    <div className="ToDo">
-    <ToDoForm makeList={setList} currentList={list}/>
-    <ToDoList currentList={list}/>
-    </div>
-    </>
-  )
+    <Container className='ToDo'>
+      <ToDoForm addTask={addTask} />
+      <ToDoList 
+        tasks={response}
+        modifyTask={modifyTask}
+        deleteTask={deleteTask}
+        />
+    </Container>
+  );
+
+
 }
 
 export default ToDo;
-
-//maintain form and list
