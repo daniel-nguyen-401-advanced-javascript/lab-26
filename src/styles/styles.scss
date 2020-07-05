@@ -11,9 +11,20 @@
 }
 
 .ToDo {
-  border: 1px solid blue;
+  border: 1px dotted purple;
   position: absolute;
-  bottom: 30%;
+  top: 13%;
+  bottom: 12%;
+  width: 100%;
+  // overflow: scroll;
+}
+
+.ToDoList {
+  border: 1px solid green;
+  overflow: scroll;
+  position: absolute;
+  top: 26%;
+  bottom: 3%;
   width: 100%;
 }
 

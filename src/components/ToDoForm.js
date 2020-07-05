@@ -12,6 +12,7 @@ function ToDoForm(props) {
     <Form onSubmit={submit}>
       <Form.Group controlId='todo-description'>
         <Form.Label>Task Description</Form.Label>
+        <br />
         <Form.Control
           as='textarea'
           rows='3'
@@ -23,6 +24,7 @@ function ToDoForm(props) {
 
       <Form.Group controlId='todo-assignee'>
         <Form.Label>Assigned To:</Form.Label>
+        <br />
         <Form.Control
           type='text'
           placeholder='Enter name'
