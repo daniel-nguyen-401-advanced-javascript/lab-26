@@ -5,6 +5,7 @@ import ToDoItem from "./ToDoItem";
 
 function ToDoList(props) {
 
+
   let currentList = [];
 
   if (props.tasks)

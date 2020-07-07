@@ -8,6 +8,20 @@ function ListDisplay(props) {
   const [page, setPage] = useState(0);
   const [displayItems, setDisplayItems] = useState([]);
 
+  //tried to bring over my title display code but can't figure out how it is all connected, or not connected
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    let str = `${props.list.length} remaining task`;
+    if (props.list.length !==1) {
+      str += 's';
+    }
+
+    console.log('props', props.data);
+    document.title = str;
+  }, [list])
+  /////////
+
   useEffect(() => {
     let renderedList = [];
 
