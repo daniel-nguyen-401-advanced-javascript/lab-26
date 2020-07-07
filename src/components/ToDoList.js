@@ -1,5 +1,7 @@
 import React from 'react';
+import ListDisplay from './ListDisplay';
 import ToDoItem from "./ToDoItem";
+
 
 function ToDoList(props) {
 
@@ -20,11 +22,13 @@ function ToDoList(props) {
   return (
   
     <div className="ToDoList">
-      <h1>Tasks</h1>
-    {currentList}
+      <h2>Tasks</h2>
+      <ListDisplay list={currentList}/>
+    {/* {currentList} */}
     </div>
    
   )
 }
+
 
 export default ToDoList;
