@@ -14,6 +14,14 @@ function SettingsForm(props) {
         listData.setDisplayCount(parseInt(e.target.value));
       }}
       />
+      <label>Show Completed</label>
+      <input 
+      type='checkbox'
+      checked={listData.showComplete} 
+      onChange={(e) =>{
+        listData.setShowCompleted(!listData.showCompleted);
+      }}
+      />
     </div>
     </>
   )

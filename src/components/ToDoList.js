@@ -1,15 +1,20 @@
-import React from 'react';
+import React , {useContext} from 'react';
 import ListDisplay from './ListDisplay';
 import ToDoItem from "./ToDoItem";
+import {ListContext} from "./Contexts";
 
 
 function ToDoList(props) {
 
+  const data = useContext(ListContext);
 
   let currentList = [];
 
   if (props.tasks)
     for (let i = 0; i < props.tasks.length; i++) {
+      if(!data.showCompleted && props.tasks[i].complete)
+        continue; 
+
       currentList.push(
         <ToDoItem
           key={i}

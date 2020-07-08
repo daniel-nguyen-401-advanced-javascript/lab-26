@@ -11,9 +11,14 @@ import {ListContext} from './components/Contexts';
 function App() {
   const [displayCount, setDisplayCount] = useState(3);
 
+  const [showCompleted, setShowCompleted] = useState(true);
+
   return (
     <div className="App">
-      <ListContext.Provider value={{displayCount, setDisplayCount}}>
+      <ListContext.Provider 
+      value={{
+        displayCount, setDisplayCount, showCompleted, setShowCompleted
+        }}>
         <Header />
         <ToDo />
         <SettingsForm />
