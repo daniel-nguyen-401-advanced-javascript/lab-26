@@ -1,0 +1,59 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.Header {
+  background-color: #0b11c4c9;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+
+.ToDo {
+  background-color: #8b0b9f77;
+  position: absolute;
+  top: 13%;
+  bottom: 12%;
+  width: 100%;
+  // overflow: scroll;
+}
+
+.ToDoList {
+  background-color: #26b10ac1;
+  overflow: scroll;
+  position: absolute;
+  top: 26%;
+  bottom: 3%;
+  width: 100%;
+  font-size: .75em;
+}
+
+.SettingsForm {
+  background-color: lightgrey;
+  position: absolute;
+  top: 15%;
+  bottom: 80%;
+  width: 25%;
+}
+
+.next {
+  position: absolute;
+  left: 60%;
+  top: 20%;
+  width: 20%;
+}
+
+.previous{
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 20%;
+}
+
+.Footer {
+  background-color: #cd0f0f93;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
